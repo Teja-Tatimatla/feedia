@@ -2,10 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
+import 'package:feedia/screens/home_screen.dart';
+
 const List<String> supportedLanguages = ['English', 'Spanish'];
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  void _navigateToPersonalDetalsScreen() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (ctx) => const HomeScreen()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                               child: Text(
                                 lang,
                                 style: const TextStyle(
-                                  color: Color.fromRGBO(255, 255, 248, 1),
+                                  color: Color.fromRGBO(231, 214, 194, 1),
                                 ),
                               ),
                             ),
@@ -58,7 +72,7 @@ class LoginScreen extends StatelessWidget {
                     Text(
                       'Welcome to Feedia!',
                       style: TextStyle(
-                        fontSize: 38,
+                        fontSize: 42,
                         fontWeight: FontWeight.bold,
                         color: Colors.orangeAccent,
                       ),
@@ -75,15 +89,17 @@ class LoginScreen extends StatelessWidget {
                     text: "Continue with Google",
                     onPressed: () {
                       // TODO: Implement Google Sign-In
+                      _navigateToPersonalDetalsScreen();
                     },
                   ),
                   const SizedBox(height: 16),
                   SignInButton(
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                     Buttons.AppleDark,
                     text: "Continue with Apple",
                     onPressed: () {
                       // TODO: Implement Apple Sign-In
+                      _navigateToPersonalDetalsScreen();
                     },
                   ),
                   SizedBox(height: 30),
@@ -91,7 +107,7 @@ class LoginScreen extends StatelessWidget {
                     'Feedia with Capital Area Food Bank helps you find food and help you navigate tough times.',
                     style: TextStyle(
                       fontSize: 12,
-                      color: Color.fromRGBO(255, 255, 248, 1),
+                      color: Color.fromRGBO(231, 214, 194, 1),
                     ),
                   ),
                 ],
