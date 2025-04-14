@@ -1,0 +1,18 @@
+{
+  "@@locale": "en",
+  "welcomeTitle": "Welcome to Feedia!",
+  "continueWithGoogle": "Continue with Google",
+  "continueWithApple": "Continue with Apple",
+  "feediaBottomText": "Feedia with Capital Area Food Bank helps you find food and help you navigate tough times.",
+  "greeting": "Hello! How can we help today?",
+  "chatPrompt": "Chat with our friendly AI assistant to find the nearest food pantry",
+  "chatHere": "Chat here.",
+  "somethingOnMind": "Something on your mind?",
+  "hereToListen": "I'm here to listen",
+  "otherServices": "Other services - Housing, Healthcare, Financial assistance etc.",
+  "letsFigureItOut": "Let's figure it out",
+  "budgetRecipes": "Looking for recipes under a budget?",
+  "letsCook": "Let's get cooking 👨‍🍳",
+  "maintainWeight": "Are you eating enough to maintain your weight?",
+  "calculateCalories": "Calculate your calories 🧮"
+}

@@ -54,7 +54,9 @@ class _ChatBotScreenState extends State<MainChatScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse("http://172.104.209.107:3000/${widget.endpoint}"),
+        Uri.parse(
+          "http://172.104.209.107:3000/${widget.endpoint}",
+        ), // Server IP not hidden as its a temp server
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({"messages": _gptHistory, "location": _location}),
       );
@@ -80,7 +82,7 @@ class _ChatBotScreenState extends State<MainChatScreen> {
     try {
       final response = await http.post(
         Uri.parse(
-          "http://172.104.209.107:3000/${widget.endpoint}",
+          "http://172.104.209.107:3000/${widget.endpoint}", // Server IP not hidden as its a temp server
         ), // Replace this
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({"messages": _gptHistory, "location": _location}),

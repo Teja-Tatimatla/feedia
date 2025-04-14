@@ -1,0 +1,18 @@
+{
+  "@@locale": "fr",
+  "welcomeTitle": "Bienvenue sur Feedia !",
+  "continueWithGoogle": "Continuer avec Google",
+  "continueWithApple": "Continuer avec Apple",
+  "feediaIntro": "Feedia, en partenariat avec la Capital Area Food Bank, vous aide à trouver de la nourriture et à traverser les moments difficiles.",
+  "greeting": "Bonjour ! Comment pouvons-nous vous aider aujourd'hui ?",
+  "chatPrompt": "Discutez avec notre assistant IA sympathique pour trouver la banque alimentaire la plus proche",
+  "chatHere": "Discutez ici.",
+  "somethingOnMind": "Quelque chose vous préoccupe ?",
+  "hereToListen": "Je suis là pour vous écouter",
+  "otherServices": "Autres services : logement, soins de santé, aide financière, etc.",
+  "letsFigureItOut": "Trouvons une solution ensemble",
+  "budgetRecipes": "Vous cherchez des recettes économiques ?",
+  "letsCook": "Cuisinons ensemble 👨‍🍳",
+  "maintainWeight": "Mangez-vous suffisamment pour maintenir votre poids ?",
+  "calculateCalories": "Calculez vos calories 🧮"
+}

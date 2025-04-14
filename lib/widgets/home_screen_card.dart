@@ -24,6 +24,8 @@ class HomeOptionCard extends StatelessWidget {
               color: Color.fromRGBO(231, 214, 194, 1),
               fontSize: 16,
             ),
+            softWrap: false,
+            overflow: TextOverflow.fade,
           ),
         ],
       ),

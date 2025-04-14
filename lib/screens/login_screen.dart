@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:feedia/screens/home_screen.dart';
 
-const List<String> supportedLanguages = ['English', 'Spanish'];
+const List<String> supportedLanguages = [
+  'English',
+  'Spanish',
+  'French',
+  'Telugu',
+  'Japanese',
+];
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key, required this.setLocale});
+
+  void Function(Locale) setLocale;
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -60,7 +69,23 @@ class _LoginScreenState extends State<LoginScreen> {
                           )
                           .toList(),
                   onChanged: (value) {
-                    //Set localization language here
+                    switch (value) {
+                      case 'English':
+                        widget.setLocale(Locale('en'));
+                        break;
+                      case 'Spanish':
+                        widget.setLocale(Locale('es'));
+                        break;
+                      case 'French':
+                        widget.setLocale(Locale('fr'));
+                        break;
+                      case 'Telugu':
+                        widget.setLocale(Locale('te'));
+                        break;
+                      case 'Japanese':
+                        widget.setLocale(Locale('ja'));
+                        break;
+                    }
                   },
                 ),
               ),
@@ -70,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     Text(
-                      'Welcome to Feedia!',
+                      AppLocalizations.of(context)!.welcomeTitle,
                       style: TextStyle(
                         fontSize: 42,
                         fontWeight: FontWeight.bold,
@@ -86,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   SignInButton(
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
                     Buttons.GoogleDark,
-                    text: "Continue with Google",
+                    text: AppLocalizations.of(context)!.continueWithGoogle,
                     onPressed: () {
                       // TODO: Implement Google Sign-In
                       _navigateToPersonalDetalsScreen();
@@ -96,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   SignInButton(
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                     Buttons.AppleDark,
-                    text: "Continue with Apple",
+                    text: AppLocalizations.of(context)!.continueWithApple,
                     onPressed: () {
                       // TODO: Implement Apple Sign-In
                       _navigateToPersonalDetalsScreen();
@@ -104,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   SizedBox(height: 30),
                   Text(
-                    'Feedia with Capital Area Food Bank helps you find food and help you navigate tough times.',
+                    AppLocalizations.of(context)!.feediaBottomText,
                     style: TextStyle(
                       fontSize: 12,
                       color: Color.fromRGBO(231, 214, 194, 1),

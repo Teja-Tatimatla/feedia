@@ -1,6 +1,4 @@
-# feedia
-
-A new Flutter project.
+## Needs lot of work with refactoring, optimization and code clean up.
 
 ## Getting Started
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:feedia/widgets/home_screen_card.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:feedia/screens/main_chat_screen.dart';
 import 'package:feedia/screens/therapy_chat_screen.dart';
@@ -50,8 +51,8 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Hello! How can we help today?',
+            Text(
+              AppLocalizations.of(context)!.greeting,
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Chat with our friendly AI assistant to find the nearest food pantry',
+                    AppLocalizations.of(context)!.chatPrompt,
                     style: TextStyle(
                       fontSize: 18,
                       color: Color.fromRGBO(231, 214, 194, 1),
@@ -80,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onTap: _navigateToMainChatScreen,
                     child: HomeOptionCard(
                       icon: Icons.chat,
-                      label: 'Chat here.',
+                      label: AppLocalizations.of(context)!.chatHere,
                     ),
                   ),
                 ],
@@ -97,18 +98,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Something on your mind?',
+                    AppLocalizations.of(context)!.somethingOnMind,
                     style: TextStyle(
                       fontSize: 18,
                       color: Color.fromRGBO(231, 214, 194, 1),
                     ),
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
                   ),
                   SizedBox(height: 12),
                   InkWell(
                     onTap: _navigateToTherapyChatScreen,
                     child: HomeOptionCard(
                       icon: Icons.people_rounded,
-                      label: 'I\'m here to listen',
+                      label: AppLocalizations.of(context)!.hereToListen,
                     ),
                   ),
                 ],
@@ -125,18 +128,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Other services - Housing, Healthcare, Financial assistance etc.',
+                    AppLocalizations.of(context)!.otherServices,
                     style: TextStyle(
                       fontSize: 18,
                       color: Color.fromRGBO(231, 214, 194, 1),
                     ),
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
                   ),
                   SizedBox(height: 12),
                   InkWell(
                     onTap: _navigateToWrapAroundChatScreen,
                     child: HomeOptionCard(
                       icon: Icons.health_and_safety,
-                      label: 'Let\'s figute it out',
+                      label: AppLocalizations.of(context)!.letsFigureItOut,
                     ),
                   ),
                 ],
@@ -149,20 +154,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Color.fromRGBO(21, 30, 40, 1),
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Looking for recipes under a budget?',
+                    AppLocalizations.of(context)!.budgetRecipes,
                     style: TextStyle(
                       fontSize: 18,
                       color: Color.fromRGBO(231, 214, 194, 1),
                     ),
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
                   ),
                   SizedBox(height: 12),
                   HomeOptionCard(
                     icon: Icons.food_bank,
-                    label: 'Let\'s get cooking 👨‍🍳',
+                    label: AppLocalizations.of(context)!.letsCook,
                   ),
                 ],
               ),
@@ -174,20 +181,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Color.fromRGBO(21, 30, 40, 1),
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Are you eating enough to maintain your weight?',
+                    AppLocalizations.of(context)!.maintainWeight,
                     style: TextStyle(
                       fontSize: 18,
                       color: Color.fromRGBO(231, 214, 194, 1),
                     ),
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
                   ),
                   SizedBox(height: 12),
                   HomeOptionCard(
                     icon: Icons.monitor_weight_rounded,
-                    label: 'Calculate your calories 🧮',
+                    label: AppLocalizations.of(context)!.calculateCalories,
                   ),
                 ],
               ),

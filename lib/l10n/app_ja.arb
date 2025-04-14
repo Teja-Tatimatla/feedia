@@ -1,0 +1,18 @@
+{
+  "@@locale": "ja",
+  "welcomeTitle": "Feediaへようこそ！",
+  "continueWithGoogle": "Googleで続行",
+  "continueWithApple": "Appleで続行",
+  "feediaBottomText": "Feediaは、Capital Area Food Bankと連携して、食料を見つけたり、困難な時期を乗り越える手助けをします。",
+  "greeting": "こんにちは！今日はどのようにお手伝いできますか？",
+  "chatPrompt": "最寄りのフードパントリーを見つけるために、親切なAIアシスタントとチャットしましょう",
+  "chatHere": "ここでチャットする",
+  "somethingOnMind": "何か気になることがありますか？",
+  "hereToListen": "お話をお聞きします",
+  "otherServices": "その他のサービス：住居、医療、金銭的支援など",
+  "letsFigureItOut": "一緒に解決しましょう",
+  "budgetRecipes": "予算内で作れるレシピをお探しですか？",
+  "letsCook": "さあ、料理を始めましょう 👨‍🍳",
+  "maintainWeight": "体重を維持するのに十分な量を食べていますか？",
+  "calculateCalories": "カロリーを計算しましょう 🧮"
+}
