@@ -8,17 +8,17 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
-  ]).then((value) => runApp(MyApp()));
+  ]).then((value) => runApp(Feedia()));
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class Feedia extends StatefulWidget {
+  const Feedia({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<Feedia> createState() => _FeediaState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _FeediaState extends State<Feedia> {
   Locale _locale = const Locale('en');
 
   void changeLocale(Locale newLocale) {

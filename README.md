@@ -1,5 +1,7 @@
 ## Needs lot of work with refactoring, optimization and code clean up.
 
+## If the debugger halts with null check error, just restart it.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
