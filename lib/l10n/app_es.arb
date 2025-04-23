@@ -14,5 +14,6 @@
   "budgetRecipes": "¿Buscas recetas económicas?",
   "letsCook": "¡Vamos a cocinar 👨‍🍳!",
   "maintainWeight": "¿Estás comiendo lo suficiente para mantener tu peso?",
-  "calculateCalories": "Calcula tus calorías 🧮"
+  "calculateCalories": "Calcula tus calorías 🧮",
+  "messageHint": "Escribe un mensaje..."
 }

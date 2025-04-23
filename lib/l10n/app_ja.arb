@@ -14,5 +14,6 @@
   "budgetRecipes": "予算内で作れるレシピをお探しですか？",
   "letsCook": "さあ、料理を始めましょう 👨‍🍳",
   "maintainWeight": "体重を維持するのに十分な量を食べていますか？",
-  "calculateCalories": "カロリーを計算しましょう 🧮"
+  "calculateCalories": "カロリーを計算しましょう 🧮",
+  "messageHint": "メッセージを入力してください…"
 }

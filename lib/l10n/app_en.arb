@@ -14,5 +14,6 @@
   "budgetRecipes": "Looking for recipes under a budget?",
   "letsCook": "Let's get cooking 👨‍🍳",
   "maintainWeight": "Are you eating enough to maintain your weight?",
-  "calculateCalories": "Calculate your calories 🧮"
+  "calculateCalories": "Calculate your calories 🧮",
+  "messageHint": "Type a message..."
 }

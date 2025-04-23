@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TherapyChatScreen extends StatefulWidget {
   const TherapyChatScreen({super.key});
@@ -158,9 +159,9 @@ class _TherapyChatScreenState extends State<TherapyChatScreen> {
                   child: TextField(
                     controller: _controller,
                     onSubmitted: (_) => _sendMessage(),
-                    decoration: const InputDecoration(
-                      hintText: "Type a message...",
-                      border: OutlineInputBorder(),
+                    decoration: InputDecoration(
+                      hintText: AppLocalizations.of(context)!.messageHint,
+                      border: const OutlineInputBorder(),
                     ),
                   ),
                 ),

@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:geolocator/geolocator.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MainChatScreen extends StatefulWidget {
   const MainChatScreen({super.key, required this.endpoint});
@@ -52,13 +53,19 @@ class _ChatBotScreenState extends State<MainChatScreen> {
   Future<void> _initialPing() async {
     await _getLocation();
 
+    final localeCode = Localizations.localeOf(context).languageCode;
+
     try {
       final response = await http.post(
         Uri.parse(
           "http://172.104.209.107:3000/${widget.endpoint}",
         ), // Server IP not hidden as its a temp server
         headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({"messages": _gptHistory, "location": _location}),
+        body: jsonEncode({
+          "messages": _gptHistory,
+          "location": _location,
+          "language": localeCode,
+        }),
       );
 
       if (response.statusCode == 200) {
@@ -297,8 +304,8 @@ class _ChatBotScreenState extends State<MainChatScreen> {
                   child: TextField(
                     controller: _controller,
                     onSubmitted: (_) => _sendMessage(),
-                    decoration: const InputDecoration(
-                      hintText: "Type a message...",
+                    decoration: InputDecoration(
+                      hintText: AppLocalizations.of(context)!.messageHint,
                       border: OutlineInputBorder(),
                     ),
                   ),
