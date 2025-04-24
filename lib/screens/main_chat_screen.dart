@@ -6,9 +6,14 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MainChatScreen extends StatefulWidget {
-  const MainChatScreen({super.key, required this.endpoint});
+  const MainChatScreen({
+    super.key,
+    required this.endpoint,
+    required this.localeCode,
+  });
 
   final String endpoint;
+  final String localeCode;
 
   @override
   State<MainChatScreen> createState() => _ChatBotScreenState();
@@ -53,8 +58,6 @@ class _ChatBotScreenState extends State<MainChatScreen> {
   Future<void> _initialPing() async {
     await _getLocation();
 
-    final localeCode = Localizations.localeOf(context).languageCode;
-
     try {
       final response = await http.post(
         Uri.parse(
@@ -64,7 +67,7 @@ class _ChatBotScreenState extends State<MainChatScreen> {
         body: jsonEncode({
           "messages": _gptHistory,
           "location": _location,
-          "language": localeCode,
+          "language": widget.localeCode,
         }),
       );
 

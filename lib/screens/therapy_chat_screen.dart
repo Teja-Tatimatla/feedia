@@ -4,7 +4,9 @@ import 'dart:convert';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TherapyChatScreen extends StatefulWidget {
-  const TherapyChatScreen({super.key});
+  const TherapyChatScreen({super.key, required this.localeCode});
+
+  final String localeCode;
 
   @override
   State<TherapyChatScreen> createState() => _TherapyChatScreenState();
@@ -30,7 +32,10 @@ class _TherapyChatScreenState extends State<TherapyChatScreen> {
       final response = await http.post(
         Uri.parse("http://172.104.209.107:3000/therapy"),
         headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({"messages": _gptHistory}),
+        body: jsonEncode({
+          "messages": _gptHistory,
+          "language": widget.localeCode,
+        }),
       );
 
       if (response.statusCode == 200) {

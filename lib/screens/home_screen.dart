@@ -17,7 +17,11 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (ctx) => MainChatScreen(endpoint: 'chat-meal'),
+        builder:
+            (ctx) => MainChatScreen(
+              endpoint: 'chat-meal',
+              localeCode: Localizations.localeOf(context).languageCode,
+            ),
       ),
     );
   }
@@ -25,7 +29,12 @@ class _HomeScreenState extends State<HomeScreen> {
   void _navigateToTherapyChatScreen() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (ctx) => TherapyChatScreen()),
+      MaterialPageRoute(
+        builder:
+            (ctx) => TherapyChatScreen(
+              localeCode: Localizations.localeOf(context).languageCode,
+            ),
+      ),
     );
   }
 
@@ -33,7 +42,11 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (ctx) => MainChatScreen(endpoint: 'wraparound-help'),
+        builder:
+            (ctx) => MainChatScreen(
+              endpoint: 'wraparound-help',
+              localeCode: Localizations.localeOf(context).languageCode,
+            ),
       ),
     );
   }
