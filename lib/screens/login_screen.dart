@@ -14,9 +14,9 @@ const List<String> supportedLanguages = [
 ];
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({super.key, required this.setLocale});
+  const LoginScreen({super.key, required this.setLocale});
 
-  void Function(Locale) setLocale;
+  final void Function(Locale) setLocale;
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
